@@ -1,0 +1,149 @@
+Here is a single, complete index.html file containing both the HTML structure and CSS styles embedded inside a <style> tag, ready to push directly to GitHub:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Header</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 7.1 & 7.4: Navbar with display: flex, logo left, links and button right */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1f2937;
+      color: #ffffff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      background-color: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* 7.2 & 7.4: Centre the banner text using flex-direction, justify-content, and align-items */
+    .banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      background-color: #f3f4f6;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .banner h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      color: #111827;
+    }
+
+    .banner p {
+      color: #4b5563;
+    }
+
+    /* 7.3 & 7.4: Row of cards with flex-wrap and flex: 1 1 200px */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #1f2937;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">MyBrand</div>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+      </nav>
+      <button class="btn">Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Welcome to Our Landing Page</h1>
+    <p>Build flexible layouts easily using CSS Flexbox.</p>
+  </section>
+
+  <!-- Cards Section -->
+  <main class="cards-container">
+    <div class="card">
+      <h3>Card 1</h3>
+      <p>This is the first feature card content.</p>
+    </div>
+    <div class="card">
+      <h3>Card 2</h3>
+      <p>This is the second feature card content.</p>
+    </div>
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>This is the third feature card content.</p>
+    </div>
+  </main>
+
+</body>
+</html>
+
