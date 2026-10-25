@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+    
+    <!-- 5.3: Google Font (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 5.1: CSS styles inside <style> tag -->
+    <style>
+        /* 5.4: Root variables for easy color and spacing management */
+        :root {
+            --primary-color: #3b62f6;
+            --text-color: #333333;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --border-color: #dddddd;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+        }
+
+        /* 5.2: Selector Type 1 - Universal (*) Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 5.3: Base styles for font, background, and line-height */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: var(--spacing-lg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 5.2: Selector Type 2 - ID (#hero) Selector */
+        #hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px var(--spacing-lg);
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* 5.2: Selector Type 3 - Element (h1) Selector */
+        h1 {
+            font-size: 32px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        #hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* 5.2: Selector Type 4 - Class (.card) Selector */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-color);
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-sm);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Banner with ID (#hero) -->
+        <div id="hero">
+            <h1>Coding Club</h1>
+            <p>Learn. Build. Share.</p>
+        </div>
+
+        <!-- Upcoming Events Card -->
+        <div class="card">
+            <h2>Upcoming Events</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML Workshop</td>
+                        <td>12 Nov</td>
+                        <td>Lab 1</td>
+                    </tr>
+                    <tr>
+                        <td>Hackathon</td>
+                        <td>20 Nov</td>
+                        <td>Seminar Hall</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Register Card -->
+        <div class="card">
+            <h2>Register</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                </div>
+                <button type="submit" class="btn-submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
