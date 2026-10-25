@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Task 4.4: Meta tags and favicon -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- Navigation Menu (4 pages: Home, About, Register, Contact) -->
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About</a> | 
+        <a href="register.html">Register</a> | 
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Page Title -->
+    <h1>Coding Club</h1>
+
+    <!-- Events Section -->
+    <h2>Upcoming Events</h2>
+    
+    <!-- Task 4.3: Events Table with Heading, Body, and Footer -->
+    <table border="1">
+        <caption><strong>Club Events</strong></caption>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML Workshop</td>
+                <td>12 Nov</td>
+                <td>Lab 1</td>
+            </tr>
+            <tr>
+                <td>Hackathon</td>
+                <td>20 Nov</td>
+                <td>Seminar Hall</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total events: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    <!-- Task 4.1 & 4.2: Registration Form -->
+    <h2>Register</h2>
+    <form action="#" method="post">
+        
+        <!-- Task 4.1: Name, Email, Password with Labels -->
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name">
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
+
+        <p>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password">
+        </p>
+
+        <!-- Task 4.2: Date, Phone, Radio buttons, Checkboxes, Dropdown, Textarea, Submit button -->
+        <p>
+            <label for="dob">Date of birth:</label><br>
+            <input type="date" id="dob" name="dob">
+        </p>
+
+        <p>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone">
+        </p>
+
+        <p>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </p>
+
+        <p>
+            <label>Interests:</label>
+            <input type="checkbox" id="web" name="interests" value="web">
+            <label for="web">Web</label>
+            <input type="checkbox" id="dsa" name="interests" value="dsa">
+            <label for="dsa">DSA</label>
+        </p>
+
+        <p>
+            <label for="branch">Branch:</label><br>
+            <select id="branch" name="branch">
+                <option value="bca">BCA</option>
+                <option value="btech">B.Tech</option>
+                <option value="bsc">B.Sc</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="reason">Why do you want to join?</label><br>
+            <textarea id="reason" name="reason" rows="4" cols="40"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Register</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
