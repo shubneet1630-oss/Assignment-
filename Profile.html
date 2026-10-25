@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 6: Profile Card</title>
+  <style>
+    /* Requirement 6.1: Global box-sizing setting[span_1](start_span)[span_1](end_span) */
+    * {
+      box-sizing: border-box; /*[span_2](start_span)[span_2](end_span) */
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 200vh; /* Extra height to demonstrate scrolling behavior */
+      padding-bottom: 50px;
+    }
+
+    /* Requirement 6.4: Sticky Top Bar[span_3](start_span)[span_3](end_span) */
+    .top-bar {
+      position: sticky; /*[span_4](start_span)[span_4](end_span) */
+      top: 0;
+      width: 100%;
+      background-color: #1a2536;
+      color: #ffffff;
+      text-align: center;
+      padding: 14px 0;
+      font-size: 15px;
+      font-weight: 500;
+      z-index: 100; /* Requirement 6.4[span_5](start_span)[span_5](end_span) */
+    }
+
+    /* Container for the profile cards */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    /* Requirement 6.2: Card border and rounded corners[span_6](start_span)[span_6](end_span) */
+    .profile-card {
+      width: 280px;
+      padding: 30px 20px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    /* Requirement 6.2: Color Version 1 (Blue theme as shown in output)[span_7](start_span)[span_7](end_span) */
+    .profile-card.theme-blue {
+      border: 2px solid #3b82f6; /*[span_8](start_span)[span_8](end_span) */
+    }
+
+    /* Requirement 6.2: Color Version 2 (Alternate theme)[span_9](start_span)[span_9](end_span) */
+    .profile-card.theme-purple {
+      border: 2px solid #8b5cf6; /*[span_10](start_span)[span_10](end_span) */
+    }
+
+    /* Requirement 6.2: Circle Avatar[span_11](start_span)[span_11](end_span) */
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%; /*[span_12](start_span)[span_12](end_span) */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .theme-blue .avatar {
+      background-color: #2563eb;
+    }
+
+    .theme-purple .avatar {
+      background-color: #7c3aed;
+    }
+
+    .user-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .user-role {
+      font-size: 14px;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+
+    /* Requirement 6.3: Fixed height and scrolling bio box[span_13](start_span)[span_13](end_span) */
+    .bio-box {
+      height: 90px; /*[span_14](start_span)[span_14](end_span) */
+      overflow-y: auto; /*[span_15](start_span)[span_15](end_span) */
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 12px;
+      color: #374151;
+      text-align: center;
+      line-height: 1.4;
+      background-color: #ffffff;
+    }
+
+    /* Requirement 6.4: Fixed + Button floating at bottom[span_16](start_span)[span_16](end_span) */
+    .floating-btn {
+      position: fixed; /*[span_17](start_span)[span_17](end_span) */
+      bottom: 25px;
+      right: 25px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #eab308;
+      border: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #111827;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      z-index: 1000; /* Requirement 6.4[span_18](start_span)[span_18](end_span) */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top Bar (Requirement 6.4)[span_19](start_span)[span_19](end_span) -->
+  <div class="top-bar">My Profile Page</div>
+
+  <div class="card-container">
+    <!-- Version 1 (Blue)[span_20](start_span)[span_20](end_span) -->
+    <div class="profile-card theme-blue">
+      <div class="avatar">R</div>
+      <div class="user-name">Riya Verma</div>
+      <div class="user-role">Web Developer in Making</div>
+      <!-- Scrolling Bio Box (Requirement 6.3)[span_21](start_span)[span_21](end_span) -->
+      <div class="bio-box">
+        Hi! I am Shub . I started coding this year. I like making small websites, drawing and listening to music. My goal is to build my own app. This is extra text to make sure the container scrolls properly when filled with more content than fits.
+      </div>
+    </div>
+
+    <!-- Version 2 (Purple - Requirement 6.2 duplicate color option)[span_22](start_span)[span_22](end_span) -->
+    <div class="profile-card theme-purple">
+      <div class="avatar">S</div>
+      <div class="user-name">Shubneet kaur </div>
+      <div class="user-role">Web Developer in Making</div>
+      <div class="bio-box">
+        Hi! I am Shub. I started coding this year. I like making small websites, drawing and listening to music. My goal is to build my own app. This is extra text to make sure the container scrolls properly when filled with more content than fits.
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Floating + Button (Requirement 6.4)[span_23](start_span)[span_23](end_span) -->
+  <button class="floating-btn">+</button>
+
+</body>
+</html>
